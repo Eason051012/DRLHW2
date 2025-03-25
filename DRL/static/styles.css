@@ -1,0 +1,36 @@
+body {
+    font-family: sans-serif;
+}
+
+.grid-container {
+    display: grid;
+    gap: 5px;
+    margin-top: 20px;
+}
+
+.cell {
+    width: 50px;
+    height: 50px;
+    border: 1px solid black;
+    text-align: center;
+    font-weight: bold;
+    line-height: 50px;
+    background-color: white;
+    cursor: pointer;
+}
+
+.start { background-color: green !important; }
+.end { background-color: red !important; }
+.obstacle { background-color: gray !important; }
+.path { background-color: yellow !important; }
+
+.matrix-container {
+    display: flex;
+    gap: 40px;
+    margin-top: 20px;
+}
+
+.matrix {
+    display: grid;
+    gap: 2px;
+}

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <title>HW1 + HW2：Gridworld 策略與價值</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</head>
+<body>
+
+    <h1>HW1 + HW2：網格地圖與策略估計</h1>
+    <label>輸入網格大小（5 - 9）：</label>
+    <input type="number" id="grid-size" min="5" max="9" value="{{ grid_size }}">
+    <button onclick="generateGrid()">生成網格</button>
+    <button onclick="generatePolicyAndValue()">隨機策略估值（HW1-2）</button>
+    <button onclick="runValueIteration()">執行價值迭代（HW2）</button>
+
+    <div class="grid-container" id="grid"></div>
+
+    <h2>策略與價值矩陣</h2>
+    <div class="matrix-container">
+        <div>
+            <h3>Policy Matrix</h3>
+            <div class="matrix" id="policy-matrix"></div>
+        </div>
+        <div>
+            <h3>Value Matrix</h3>
+            <div class="matrix" id="value-matrix"></div>
+        </div>
+    </div>
+
+</body>
+</html>
